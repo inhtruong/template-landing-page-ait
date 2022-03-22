@@ -4,6 +4,7 @@
   --color-primary: #1054a1;
   --color-black: #1a1a1a;
   --color-white: #fff;
+  --color-gray: #798b9c;
   --transition: all 0.2s linear;
 }
 
@@ -26,6 +27,12 @@ h2 {
   color: var(--color-primary);
 }
 
+h3 {
+  font-size: 34px;
+  list-style: 42px;
+  color: var(--color-primary);
+}
+
 h4 {
   font-size: 20px;
 }
@@ -37,7 +44,7 @@ h6 {
 
 p {
   font-size: 16px;
-  margin: 15px 0 20px 0;
+  margin: 25px 0 15px 0;
 }
 
 .section-p1 {
@@ -49,16 +56,6 @@ p {
   margin: 40px 0;
 }
 
-.watermark {
-  position: absolute;
-  top: 155px;
-  left: 360px;
-  font-size: 220px;
-  opacity: 0.17;
-  z-index: -1;
-  color: #798b9c;
-}
-
 a {
   cursor: pointer;
 }
@@ -67,13 +64,44 @@ body {
   margin: 0 auto;
 }
 
+.watermark {
+  position: absolute;
+  top: 155px;
+  left: 360px;
+  font-size: 220px;
+  opacity: 0.17;
+  z-index: -1;
+  color: var(--color-gray);
+}
+
+.title-section {
+  position: relative;
+  margin-left: 600px;
+}
+
+.title-section h4 {
+  color: var(--color-gray);
+}
+
+.title-section h4::before {
+  content: "";
+  width: 50px;
+  height: 2px;
+  border-radius: 5px;
+  background-color: var(--color-gray);
+  position: absolute;
+  top: 18px;
+  left: -70px;
+}
+
 #header {
+  background-color: var(--color-white);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 85%;
+  width: 100%;
   margin: 0 auto;
-  padding: 5px 80px;
+  padding: 5px 222.5px;
   z-index: 1;
   position: sticky;
   top: 0;
@@ -159,24 +187,18 @@ input {
   background-color: var(--color-primary);
 }
 
-#about .title-section {
-  padding-left: 200px;
-}
+/* ================ ABOUT US =============== */
 
-#about .title-section h4 {
-  color: #798b9c;
-}
-
-#about .about-card {
+.about-card {
   display: flex;
   justify-content: flex-start;
   margin: 200px 100px 0;
   gap: 2em;
 }
 
-#about .about-card .about-card__item {
+.about-card .about-card__item {
   background-color: var(--color-primary);
   color: var(--color-white);
-  padding: 25px;
+  padding: 30px 40px 20px;
   border-radius: 15px;
 }
